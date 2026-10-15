@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DonBelle Gallery | DB PLAY</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="gallery-animation.css">
+</head>
+<body>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <header class="glass-header">
+    <div class="nav-left">
+      <a href="index.html" class="logo-container">
+        <img src="GENERAL_PHOTOS/LOGO.png" alt="DB PLAY Logo" class="site-logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active-pill">HOME</a></li>
+        <li><a href="index.html">Movie/Series</a></li>
+        <li><a href="index.html">My Watchlist</a></li>
+        <li><a href="news.html">News &amp; Update</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <form class="search-box" id="searchForm" role="search">
+        <input type="text" id="searchInput" placeholder="Search DonBelle photos..." class="glass-input" aria-label="Search DonBelle photos" autocomplete="off">
+        <i class="fa-solid fa-magnifying-glass search-icon" id="searchIcon" role="button" tabindex="0" aria-label="Search"></i>
+      </form>
+      <img src="GENERAL_PHOTOS/PROFILE-AVATAR.png" alt="User Profile" class="profile-avatar">
+
+      <div class="profile-menu-container">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-haspopup="true" aria-expanded="false" aria-controls="menuPanel">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="profile-dropdown" id="menuPanel">
+          <a href="about.html"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
+          <a href="gallery.html" aria-current="page"><i class="fa-regular fa-images"></i><span>Gallery</span></a>
+          <a href="contact.html"><i class="fa-regular fa-envelope"></i><span>Contact Us</span></a>
+          <a href="playlist.html"><i class="fa-solid fa-music"></i><span>Playlist</span></a>
+          <a href="login1.html" id="signOut"><i class="fa-solid fa-right-from-bracket"></i><span>Sign Out</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="gallery-page">
+    <section class="gallery-intro">
+      <p class="gallery-eyebrow">DONBELLE PHOTO COLLECTION</p>
+      <h1>DonBelle <em>Gallery.</em></h1>
+      <p>BTS, ASAP, red carpets and kulitan moments of Donny and Belle. Tap the centre photo to see it bigger.</p>
+    </section>
+
+    <section class="carousel" id="carousel" aria-roledescription="carousel" aria-label="DonBelle photo gallery">
+      <button class="nav-btn prev" id="prevBtn" aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4 7 12l8 8"/></svg>
+      </button>
+      <div class="slides" id="slides"></div>
+      <button class="nav-btn next" id="nextBtn" aria-label="Next photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 4 8 8-8 8"/></svg>
+      </button>
+    </section>
+
+    <div class="carousel-foot">
+      <span class="counter" id="counter" aria-live="polite">01 / 10</span>
+      <div class="dots" id="dots" role="tablist" aria-label="Choose photo"></div>
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbTitle" aria-hidden="true">
+    <div class="lb-card">
+      <figure class="lb-photo">
+        <img id="lbImg" alt="">
+        <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4 7 12l8 8"/></svg>
+        </button>
+        <button class="lb-nav lb-next" id="lbNext" aria-label="Next photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 4 8 8-8 8"/></svg>
+        </button>
+      </figure>
+      <aside class="lb-info">
+        <button class="lb-close" id="lbClose" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg>
+        </button>
+        <p class="lb-count" id="lbCount">01 / 10</p>
+        <h2 id="lbTitle"></h2>
+        <p class="lb-sub" id="lbSub"></p>
+        <p class="lb-caption" id="lbCaption"></p>
+        <h3>More DonBelle photos</h3>
+        <div class="lb-thumbs" id="lbThumbs"></div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="glass-footer">
+    <img src="GENERAL_PHOTOS/LOGOFOOTER.png" alt="DB PLAY Logo" class="footer-logo">
+    <div class="footer-version">Version: 26.09.03-1</div>
+    <div class="footer-links">
+      <a href="#">Help and Support</a>
+      <a href="#">Terms and Conditions</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="copyright">Copyright &copy; 2026 DB Play | All Rights Reserved.</div>
+  </footer>
+
+  <script src="gallery.js"></script>
+</body>
+</html>

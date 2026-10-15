@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Playlist | DB PLAY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="turntable.css">
+</head>
+<body>
+  <div class="ambient-glow glow-1"></div><div class="ambient-glow glow-2"></div><div class="ambient-glow glow-3"></div>
+
+  <header class="glass-header"><div class="nav-left"><a href="index.html" class="logo-container"><img src="GENERAL_PHOTOS/LOGO.png" alt="DB PLAY Logo" class="site-logo"></a><ul class="nav-links"><li><a href="index.html" class="active-pill">HOME</a></li><li><a href="index.html">Movie/Series</a></li><li><a href="index.html">My Watchlist</a></li><li><a href="news.html">News &amp; Update</a></li></ul></div>
+    <div class="nav-right"><form class="search-box" id="searchForm" role="search"><input type="text" id="searchInput" placeholder="Search..." class="glass-input" aria-label="Search" autocomplete="off"><i class="fa-solid fa-magnifying-glass search-icon" id="searchIcon" role="button" tabindex="0" aria-label="Search"></i></form><img src="GENERAL_PHOTOS/PROFILE-AVATAR.png" alt="User Profile" class="profile-avatar"><div class="profile-menu-container"><button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-haspopup="true" aria-expanded="false" aria-controls="menuPanel"><i class="fa-solid fa-bars"></i></button><div class="profile-dropdown" id="menuPanel"><a href="about.html"><i class="fa-solid fa-circle-info"></i><span>About</span></a><a href="gallery.html"><i class="fa-regular fa-images"></i><span>Gallery</span></a><a href="contact.html"><i class="fa-regular fa-envelope"></i><span>Contact Us</span></a><a href="playlist.html" aria-current="page"><i class="fa-solid fa-music"></i><span>Playlist</span></a><a href="login1.html" id="signOut"><i class="fa-solid fa-right-from-bracket"></i><span>Sign Out</span></a></div></div></div>
+  </header>
+
+  <main class="page-main playlist-main">
+    <section class="playlist-hero">
+      <div class="playlist-copy" id="playlistCopy">
+        <p class="eyebrow" id="heroEyebrow">DB PLAY ORIGINAL ALBUM</p>
+        <h1 id="heroTitle">DonBelle<br><em>Playlist.</em></h1>
+        <p class="hero-description" id="heroDescription">DonBelle songs filled with love, sweet melodies, and unforgettable moments.</p>
+        <div class="hero-meta"><span><i class="fa-solid fa-music"></i>9 songs</span><span>•</span><span><i class="fa-solid fa-compact-disc"></i>Demo player</span></div>
+        <button class="primary-btn" id="playAllBtn" type="button"><i class="fa-solid fa-play"></i> <span id="playAllLabel">Play playlist</span></button>
+      </div>
+
+      <div class="record-stage" id="recordStage">
+        <div class="turntable">
+          <div class="platter"><div class="vinyl-record" id="vinylRecord"><div class="vinyl-cover" id="vinylCover"></div></div></div>
+          <div class="tonearm"><div class="arm-rod"></div><div class="arm-pivot"></div><div class="arm-head"></div></div>
+          <div class="power-knob"></div>
+          <div class="glass-lid" id="glassLid" role="button" tabindex="0" aria-label="Open the cover and play"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="track-section">
+      <div class="section-heading"><div><p class="eyebrow">YOUR SOUNDTRACK</p><h2>Tracklist <em>01—09</em></h2></div><span class="track-total">9 TRACKS</span></div>
+      <div class="track-list" id="trackList"></div>
+    </section>
+
+    <div class="player-bar">
+      <div class="now-playing-art"><i class="fa-solid fa-compact-disc"></i></div>
+      <div class="now-playing-text"><span class="mini-label">NOW PLAYING</span><strong id="nowTitle">Pick a song</strong><span id="nowArtist">DB PLAY</span></div>
+      <div class="player-controls">
+        <button id="prevTrack" type="button" aria-label="Previous track"><i class="fa-solid fa-backward-step"></i></button>
+        <button id="togglePlayback" class="player-play" type="button" aria-label="Play selected track"><i class="fa-solid fa-play"></i></button>
+        <button id="nextTrack" type="button" aria-label="Next track"><i class="fa-solid fa-forward-step"></i></button>
+      </div>
+      <div class="player-progress"><span id="currentTime">0:00</span><input id="progressRange" type="range" min="0" max="100" value="0" aria-label="Track progress"><span id="duration">0:00</span></div>
+      <button class="volume-btn" id="muteBtn" type="button" aria-label="Mute"><i class="fa-solid fa-volume-high"></i></button>
+    </div>
+    <audio id="audioPlayer" preload="metadata"></audio>
+
+  </main>
+
+  <footer class="glass-footer"><img src="GENERAL_PHOTOS/LOGOFOOTER.png" alt="DB PLAY Logo" class="footer-logo"><div class="footer-version">Version: 26.09.03-1</div><div class="footer-links"><a href="#">Help and Support</a><a href="#">Terms and Conditions</a><a href="#">Privacy Policy</a><a href="#">Cookie Policy</a></div><div class="social-icons"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div><div class="copyright">Copyright &copy; 2026 DB Play | All Rights Reserved.</div></footer>
+
+  <script src="pages.js"></script>
+  <script src="playlist.js"></script>
+</body>
+</html>
